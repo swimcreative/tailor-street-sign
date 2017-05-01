@@ -45,6 +45,7 @@ if ( ! function_exists( 'tailor_shortcode_test_element' ) ) {
 	     */
 	    $html_atts = apply_filters( 'tailor_shortcode_html_attributes', $html_atts, $atts, $tag );
 	    $html_atts['class'] = implode( ' ', (array) $html_atts['class'] );
+      $html_atts['class'] = $html_atts['class'] . ' tailor-street-sign';
 	    $html_atts = tailor_get_attributes( $html_atts );
 
 	    $outer_html = "<div {$html_atts}>%s</div>";
