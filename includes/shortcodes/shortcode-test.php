@@ -27,10 +27,13 @@ if ( ! function_exists( 'tailor_shortcode_test_element' ) ) {
 
 	    //$content = '<p><b>This is a test element with all control types.</b></p>';
 
+
       ob_start();
       custom_breadcrumbs();
+      $content = ob_get_clean();
 
-      $content = ob_get_clean() . '<h1>' . get_the_title() . '</h1>';
+
+      //$content = '<h1>' . get_the_title(1) . '</h1>';
 
 
 	    /**
